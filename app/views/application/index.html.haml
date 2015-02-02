@@ -1,1 +1,9 @@
-home
+= form_for :item, :url => {:controller => 'items', :action => 'create'} do |f|
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.label :type
+    = f.select :type, [["Movie", "label 1"], ["Music", "label_2"], ["Book", "label_3"]]
+  %p
+    = f.submit
