@@ -1,0 +1,9 @@
+%h1
+  New Item
+
+  = form_for(@item) do |f|
+    = f.label :name
+    = f.text_field :name
+    = f.label :type
+    = f.select :media_type, [["Movie", "movie"], ["Music", "music"], ["Book", "book"]]
+    = f.submit

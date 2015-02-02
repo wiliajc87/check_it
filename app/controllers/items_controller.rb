@@ -1,13 +1,23 @@
-class SessionsController < ApplicationController
+class ItemsController < ApplicationController
   def new
+    @item = Item.new
   end
   def create
-    @item = Item.find_or_create_by(name: params[:name], type: params[:type])
-    session[:user_id] = @user.id
+    @item = Item.new(name: params[:item][:name], media_type: params[:item][:media_type])
     redirect_to root_path
   end
-  def destroy
-    session[:user_id] = nil
-    redirect_to new_session_path
+
+  def show
+    @item = params[:item_id]
   end
 end
+
+
+    # if params[:item][:type] == 'music'
+    #   @item.type = 'music'
+    # elsif params[:item][:type] == 'movie'
+    #   @item.type = 'movie'
+    # else
+    #   @item.type = "book"
+    # end
+    # @item.save

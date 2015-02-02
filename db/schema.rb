@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150202184807) do
   create_table "items", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name"
-    t.string   "type"
+    t.string   "media_type"
     t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"

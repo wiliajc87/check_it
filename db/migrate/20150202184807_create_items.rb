@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.belongs_to :user
       t.string :name
-      t.string :type
+      t.string :media_type
       t.string :link
 
       t.timestamps
