@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
       redirect_to new_session_path
     else
       @user = current_user
-      @item = Item.new
     end
   end
 end
