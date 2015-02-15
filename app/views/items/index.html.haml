@@ -3,6 +3,9 @@
     %li
       = i.name
     %li
-      = i.media_type
-    %li
       = i.link
+    -if i.media_type == "movie"
+      %li
+        = i.rotten_score
+      %li
+        = i.on_netflix

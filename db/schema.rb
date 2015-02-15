@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20150202184807) do
     t.string   "name"
     t.string   "media_type"
     t.string   "link"
+    t.string   "rotten_score"
+    t.boolean  "on_netflix"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

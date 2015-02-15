@@ -5,6 +5,8 @@ class CreateItems < ActiveRecord::Migration
       t.string :name
       t.string :media_type
       t.string :link
+      t.string :rotten_score
+      t.boolean :on_netflix
 
       t.timestamps
     end
