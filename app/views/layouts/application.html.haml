@@ -1,10 +1,14 @@
 !!!
-%html
+%html{:lang => "en"}
   %head
+    %meta{:content => "width=device-width, initial-scale=1, user-scalable=no", :name => "viewport"}/
     %title CheckIt
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    .container
+    .navbar-inverse.navbar-fixed-top
+      .container-fluid
+        = render 'shared/navigation'
+    .container-fluid
       = yield

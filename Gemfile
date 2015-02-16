@@ -6,7 +6,6 @@ gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -18,7 +17,7 @@ gem 'httparty'
 gem 'nokogiri'
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -38,7 +37,10 @@ gem 'bcrypt', '~> 3.1.7'
 #FRONT END
 gem 'haml', '~> 4.0.6'
 gem 'font-awesome-sass'
-gem "twitter-bootstrap-rails"
+gem 'bootstrap-sass', '~> 3.3.3'
+gem 'sass-rails', '>= 3.2'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
