@@ -1,19 +1,55 @@
-
-@import "bootstrap-sprockets"
-@import "font-awesome-sprockets"
-@import "font-awesome"
-
+@import url(http://fonts.googleapis.com/css?family=Ruda)
 $brand-primary: #741212
 $on-brand-font: white
 $navbar-inverse-bg: $brand-primary
+@import "font-awesome-sprockets"
+@import "font-awesome"
+@import "bootstrap"
+@import "bootstrap-sprockets"
 
-.navbar-inverse
-  font-weight: 800
+*
+  font-family: 'Ruda', sans-serif
+
+
 body
   padding-top: 70px
 
+.content-col
+  background-color: white
+
+p, ol > li
+  font-weight: 400
+  font-size: 1.5em
+
+ol
+  margin-left: -5%
+
+// REFACTOR THIS FOR NON-iPHONES LATER
+.front-page-icons
+  color: #817F21
+h1
+  color: #147EC0
+  font-size: 4em
+
+h3
+  color: #C00A0A
 
 
 
 
-@import "bootstrap"
+.navbar-inverse
+  font-weight: 800
+
+btn
+  margin-top: 10px
+
+.form-control
+  margin-bottom: 10px
+
+.navbar-inverse .navbar-brand,  .navbar-inverse .navbar-nav > li > a
+  color: $on-brand-font
+
+
+@media screen and (min-width: 990px)
+  body
+    background-color: grey
