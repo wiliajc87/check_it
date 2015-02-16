@@ -1,3 +1,27 @@
-%h1 New User
-= render 'form'
-= link_to 'Back', users_path
+%h1.text-center
+  New User
+.row
+  .col-md-6.col-md-offset-3.form-group
+    = form_for(@user) do |f|
+      - if @user.errors.any?
+        #error_explanation
+          %h2
+            = pluralize(@user.errors.count, "error")
+            prohibited this user from being saved:
+          %ul
+            - @user.errors.full_messages.each do |message|
+              %li= message
+      .field
+        = f.label "Username:"
+        %br
+          = f.text_field :username, :class => "form-control"
+      .field
+        = f.label "Email:"
+        %br
+          = f.text_field :email, :class => "form-control"
+      .field
+        = f.label "Password:"
+        %br
+          = f.text_field :password_digest, :class => "form-control"
+      .actions
+        = f.submit "Create", :class => "btn btn-primary"

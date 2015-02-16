@@ -9,7 +9,10 @@
   %body
     .navbar-inverse.navbar-fixed-top
       .container-fluid
-        = render 'shared/navigation'
+        -if current_user
+          = render 'shared/logged'
+        -if !current_user
+          = render 'shared/unlogged'
     .container-fluid
       .row
         .col-md-6.col-md-offset-3.content-col

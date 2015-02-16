@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   include ApplicationHelper
   def index
-    @item = Item.new
+    if current_user
+      @item = Item.new
+    end
   end
 end

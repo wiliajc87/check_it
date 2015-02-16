@@ -1,9 +1,11 @@
-%h1
-  New Item
-
-= form_for(@item) do |f|
-  = f.label :name
-  = f.text_field :name
-  = f.label :media_type
-  = f.select :media_type, [["Movie", "movie"], ["Music", "music"], ["Book", "book"]]
-  = f.submit
+%h1.text-center
+  New Suggestion
+.row
+  .col-md-4.col-md-offset-4.form-group
+    = form_for(@item) do |f|
+      = f.label "Name:"
+      = f.text_field :name, :class => "form-control"
+      = f.label "Media Type:"
+      = f.select :media_type, [["Movie", "movie"], ["Music", "music"], ["Book", "book"]], :class => "form-control"
+      %p
+        = f.submit "Submit", :class => "btn btn-primary"
