@@ -5,8 +5,4 @@
 %p
   %strong Email:
   = @user.email
-%p
-  %strong Password digest:
-  = @user.password_digest
 = link_to 'Edit', edit_user_path(@user)
-|

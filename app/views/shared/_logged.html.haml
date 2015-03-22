@@ -7,10 +7,8 @@
 #bs-example-navbar-collapse-1.collapse.navbar-collapse
   %ul.nav.navbar-nav
     %li
-      %a{:href => "users/#{current_user.id}"}
-        Account Settings
-        %span.sr-only (current)
+      = link_to "Saved Suggestions", items_path, method: :get
+    %li
+      = link_to "New Suggestion", root_path
     %li
       = link_to "Logout", session_path(session[:user_id]), method: :delete if session[:user_id]
-    %li
-      = link_to "Saved Suggestions", user_path(current_user), method: :get

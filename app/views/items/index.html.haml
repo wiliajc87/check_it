@@ -1,11 +1,32 @@
-- @items.each do |i|
-  %ul
-    %li
-      = i.name
-    %li
-      = i.link
-    -if i.media_type == "movie"
+-if !@movies.empty?
+  %h1
+    %i.fa.fa-film
+    Movies
+  - @movies.each do |i|
+    %ul.item_listing
       %li
-        = i.rotten_score
+        %h2
+          %a{:href => i.link}= i.name
+        %p= link_to "(Delete)", item_path(i.id), method: :delete
       %li
-        = i.on_netflix
+        %h3= "Rotten Tomato Score: #{i.rotten_score}"
+-if !@music.empty?
+  %h1
+    %i.fa.fa-music
+    Music
+  - @music.each do |i|
+    %ul.item_listing
+      %li
+        %h2
+          %a{:href => i.link}= i.name
+        %p= link_to "(Delete)", item_path(i.id), method: :delete
+-if !@books.empty?
+  %h1
+    %i.fa.fa-book
+    Books
+  - @books.each do |i|
+    %ul.item_listing
+      %li
+        %h2
+          %a{:href => i.link}= i.name
+        %p= link_to "(Delete)", item_path(i.id), method: :delete
