@@ -19,12 +19,6 @@ class Item < ActiveRecord::Base
     self.link = movie_search["movies"][0]["links"]["alternate"]
     self.rotten_score = movie_search["movies"][0]["ratings"]["critics_score"]
     doc = Nokogiri::HTML(open("#{self.link}"))
-    if doc.css("#addMe").children.text == "Add to Queue"
-      self.on_netflix = true
-    else
-      self.on_netflix = false
-    end
-
   end
 
   def music_type
